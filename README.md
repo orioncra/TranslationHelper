@@ -9,4 +9,11 @@ Non-commercial translation assistant program for game or something.
 * People who need all-in-one translation program.
 * 올인원 번역 프로그램을 필요로 하는 사람들.
 ##  Dev Plan
-* 
+* Implementation of NodeGraph structure.
+* Develope translation Helper assistant features.
+* Gather opinions and make more comfortable tools.
+* Performance optimization.
+##  What we need
+* We need opinion of yours for better tools.
+## Develope Environment
+* WPF, vs 2019.
