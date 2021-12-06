@@ -7,6 +7,7 @@ Non-commercial translation assistant program for game or something.
 ## Planned function
 * Branch simulation function through conditions and options.
 * Search for words , machine translation, idioms, and their links using crawling.
+* Auto
 ##  Dev Plan
 * Implementation of NodeGraph structure.
 * Develope translation Helper assistant features.
@@ -18,4 +19,4 @@ Non-commercial translation assistant program for game or something.
 ##  What we need
 * We need opinion of yours for better tools.
 ## Develope Environment
-* WPF, XAML, C#.
+* WPF- XAML, C#.
