@@ -34,3 +34,6 @@ C:\Users\orion\Downloads\repository\TranslationHelper\TranslationHelper\Translat
 C:\Users\orion\Downloads\repository\TranslationHelper\TranslationHelper\TranslationHelper\obj\Debug\TranslationHelper.csproj.CoreCompileInputs.cache
 C:\Users\orion\Downloads\repository\TranslationHelper\TranslationHelper\TranslationHelper\obj\Debug\TranslationHelper.exe
 C:\Users\orion\Downloads\repository\TranslationHelper\TranslationHelper\TranslationHelper\obj\Debug\TranslationHelper.pdb
+C:\Users\orion\Downloads\repository\TranslationHelper\TranslationHelper\TranslationHelper\obj\Debug\View\ImageReferenceView.g.cs
+C:\Users\orion\Downloads\repository\TranslationHelper\TranslationHelper\TranslationHelper\obj\Debug\View\ImageReferenceView.baml
+C:\Users\orion\Downloads\repository\TranslationHelper\TranslationHelper\TranslationHelper\obj\Debug\GeneratedInternalTypeHelper.g.cs

@@ -4,9 +4,18 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TranslationHelper.View"
+        xmlns:viewModel="clr-namespace:TranslationHelper.ViewModel"
         mc:Ignorable="d"
         Title="ImageReferenceView" Height="450" Width="800">
+    <Window.DataContext>
+        <viewModel:ImageReferenceViewModel/>
+    </Window.DataContext>
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0"/>
+        <Image Source="C:\Users\orion\Downloads\repository\TranslationHelper\TranslationHelper\TranslationHelper\bin\Debug\focus1.jpeg" Grid.Row="1"/>
     </Grid>
 </Window>

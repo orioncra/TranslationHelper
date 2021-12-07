@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using TranslationHelper.Model;
+using TranslationHelper.View;
 
 namespace TranslationHelper
 {
@@ -20,11 +21,26 @@ namespace TranslationHelper
     /// </summary>
     public partial class MainWindow : Window
     {
+        private ImageReferenceView IMV = null;
         public MainWindow()
         {
             InitializeComponent();
-            Crawl cr = new Crawl();
-            cr.GetWord("wood");
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            IMV = new ImageReferenceView();
+            IMV.Show();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

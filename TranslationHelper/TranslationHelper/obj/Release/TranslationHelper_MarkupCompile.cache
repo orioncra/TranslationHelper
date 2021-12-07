@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-C:\Users\orion\Downloads\repository\TranslationHelper\TranslationHelper\TranslationHelper\obj\Debug\
+C:\Users\orion\Downloads\repository\TranslationHelper\TranslationHelper\TranslationHelper\obj\Release\
 TranslationHelper
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Users\orion\Downloads\repository\TranslationHelper\TranslationHelper\TranslationHelper\App.xaml
 2717957926
 
-10189089182
+8954311896
 1759421425
 MainWindow.xaml;View\ImageReferenceView.xaml;
 
