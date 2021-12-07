@@ -7,7 +7,7 @@ Non-commercial translation assistant program for game or something.
 ## Planned function
 * Branch simulation function through conditions and options.
 * Search for words , machine translation, idioms, and their links using crawling.
-* Auto
+* Easy import script.
 ##  Dev Plan
 * Implementation of NodeGraph structure.
 * Develope translation Helper assistant features.
