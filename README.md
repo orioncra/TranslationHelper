@@ -20,3 +20,5 @@ Non-commercial translation assistant program for game or something.
 * We need your help for better tools. Please check **https://github.com/orioncra/TranslationHelper/wiki/Contribution-Guide**.
 ## Develope Environment
 * WPF- XAML, C#.
+# For Korean user
+https://github.com/orioncra/TranslationHelper/wiki/Korean-readme
