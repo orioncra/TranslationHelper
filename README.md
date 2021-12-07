@@ -17,6 +17,6 @@ Non-commercial translation assistant program for game or something.
 ## Getting Started
 *Not prepared yet.*
 ## Contribution guide
-* We need your help for better tools. Please check **https://github.com/orioncra/TranslationHelper/wiki/Contribution-Guide**
+* We need your help for better tools. Please check **https://github.com/orioncra/TranslationHelper/wiki/Contribution-Guide**.
 ## Develope Environment
 * WPF- XAML, C#.
