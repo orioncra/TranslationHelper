@@ -16,7 +16,7 @@ Non-commercial translation assistant program for game or something.
 * Synchronize and collaborate features online using Github.
 ## Getting Started
 *Not prepared yet.*
-##  What we need
-* We need opinion of yours for better tools.
+## Contribution guide
+* We need your help for better tools. Please check **https://github.com/orioncra/TranslationHelper/wiki/Contribution-Guide**
 ## Develope Environment
 * WPF- XAML, C#.
