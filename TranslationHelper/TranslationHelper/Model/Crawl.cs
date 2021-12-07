@@ -28,9 +28,19 @@ namespace TranslationHelper.Model
             _options.AddArgument("headless");
         }
 
-        public string GetTranslatedText()
+        public string GetWord(string TW)
         {
-            string TT = "Hello, Bye";
+            _driver = new ChromeDriver(_driverService, _options);
+            _driver.Navigate().GoToUrl("https://en.dict.naver.com/#/search?range=all&query="+TW);
+            Thread.Sleep(1000);
+            var element = _driver.FindElement(By.XPath("//*[@id='searchPage_entry']/div/div[1]/ul/li/p"));
+            TW = element.Text;
+            Debug.WriteLine(TW);
+            return TW;
+        }
+
+        public string GetTranslatedText(string TT)
+        {
             _driver = new ChromeDriver(_driverService, _options);
             _driver.Navigate().GoToUrl("https://papago.naver.com/");
             _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
