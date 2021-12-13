@@ -35,24 +35,32 @@ namespace TranslationHelper.Model
             Thread.Sleep(1000);
             var element = _driver.FindElement(By.XPath("//*[@id='searchPage_entry']/div/div[1]/ul/li/p"));
             TW = element.Text;
+            try
+            {
+                element = _driver.FindElement(By.XPath("//*[@id='searchPage_entry']/div"));
+                TW = element.Text;
+            }
+            catch
+            {
+
+            }
             Debug.WriteLine(TW);
             return TW;
         }
 
-        public string GetTranslatedText(string TT)
+        public string GetTranslatedText(string TT, string st, string ob)
         {
             _driver = new ChromeDriver(_driverService, _options);
-            _driver.Navigate().GoToUrl("https://papago.naver.com/");
+            Debug.WriteLine("https://papago.naver.com/?sk=" + st + "&tk=" + ob + "&st=" + TT);
+            _driver.Navigate().GoToUrl("https://papago.naver.com/?sk=" + st + "&tk=" + ob + "&st="+TT);
             _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
-            var element = _driver.FindElement(By.XPath("//*[@id='txtSource']"));
-            element.SendKeys(TT);
             Thread.Sleep(1000);
-            element = _driver.FindElement(By.XPath("//*[@id='btnTranslate']"));
+            var element = _driver.FindElement(By.XPath("//*[@id='btnTranslate']"));
             element.Click();
             Thread.Sleep(1000);
             element = _driver.FindElement(By.XPath("//*[@id='txtTarget']"));
             Debug.WriteLine(element.Text);
-            return TT;
+            return element.Text;
         }
 
         public void GetIdiomReference(string q)
@@ -85,13 +93,57 @@ namespace TranslationHelper.Model
                         }
                         Debug.WriteLine(temp);
                         Debug.WriteLine("add line");
-                        lines.Add(temp);
-                        temp = _driver.FindElement(By.XPath("//*[@id='rso']/div[" + j.ToString() + "]/div/div/div[1]/a")).GetAttribute("href");
-                        links.Add(temp);
-                        LineCount++;
+                        if (lines.Contains(temp))
+                        {
+                            Debug.WriteLine("alredy in");
+                        }
+                        else
+                        {
+                            lines.Add(temp);
+                            temp = _driver.FindElement(By.XPath("//*[@id='rso']/div[" + j.ToString() + "]/div/div/div[1]/a")).GetAttribute("href");
+                            links.Add(temp);
+                            LineCount++;
+                        }
                     }
                     catch
                     {
+                        try
+                        {
+                            Debug.WriteLine("//*[@id='rso']/div[" + j.ToString() + "]/div/div/div[2]/div/span[2]");
+                            if (j == 10)
+                            {
+                                temp = _driver.FindElement(By.XPath("//*[@id='rso']/div[10]/div/div/div/div[2]/div")).Text;
+                            }
+                            else
+                            {
+                                temp = _driver.FindElement(By.XPath("//*[@id='rso']/div[" + j.ToString() + "]/div/div/div[2]/div")).Text;
+                            }
+                            Debug.WriteLine(temp);
+                            Debug.WriteLine("add line");
+                            if (lines.Contains(temp) != false)
+                            {
+                                lines.Add(temp);
+                                LineCount++;
+                                try
+                                {
+                                    temp = _driver.FindElement(By.XPath("//*[@id='rso']/div[" + j.ToString() + "]/div/div/div[1]/a")).GetAttribute("href");
+                                    links.Add(temp);
+                                }
+                                catch
+                                {
+                                    links.Add("no link");
+                                }
+                            }
+                            else
+                            {
+                                Debug.WriteLine("already in");
+                            }
+                            
+                        }
+                        catch
+                        {
+
+                        }
                         Debug.WriteLine("No more");
                     }
                 }
@@ -101,7 +153,7 @@ namespace TranslationHelper.Model
                 }
                 catch
                 {
-                    Debug.WriteLine("No more");
+                    Debug.WriteLine("No more page");
                     break;
                 }
             }
